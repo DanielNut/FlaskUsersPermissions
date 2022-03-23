@@ -10,7 +10,7 @@
 #### Просто чтобы выйти из psql: 
 #### \q
 #### Создание таблиц:
-#### python init_db
+#### python init_db.py
 #### Создается две таблицы member и permission
 ## Запуск приложения:
 #### python app.py
