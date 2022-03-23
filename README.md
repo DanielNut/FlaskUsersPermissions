@@ -1,7 +1,7 @@
+## Подключение окружения
+#### source venv/bin/activate
 ## Установка окружения
 ### pip install -r requirements.txt
-### Подключение окружения
-#### source venv/bin/activate
 ## Запуск бд:
 #### sudo -iu postgres psql
 #### CREATE DATABASE alar;
