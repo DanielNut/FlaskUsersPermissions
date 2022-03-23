@@ -5,7 +5,7 @@
 ## Запуск бд:
 #### sudo -iu postgres psql
 #### CREATE DATABASE alar;
-#### CREATE USER user WITH PASSWORD 'pass';
+#### CREATE USER my_user WITH PASSWORD 'pass';
 #### GRANT ALL PRIVILEGES ON DATABASE alar TO my_user;
 #### Просто чтобы выйти из psql: 
 #### \q
