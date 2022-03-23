@@ -1,4 +1,6 @@
 import json
+import time
+import asyncio
 
 import flask.app
 from flask import Flask, render_template, url_for, request, flash, session, redirect, abort
@@ -214,6 +216,7 @@ def arr2():
 
 @app.route('/array3')
 def arr3():
+    time.sleep(3)
     arr = []
     for i in range(21, 31):
         x = {"id": f"{i}", "name": f"Test {i}"}
