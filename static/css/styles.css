@@ -1,0 +1,109 @@
+html, body {
+	font-family: 'Arial';
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	color: #0059b2;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #CC0000;
+	text-decoration: none;
+}
+
+.clear {clear: both;}
+
+ul.menu {
+    list-style: none;
+	background: #3F4137;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	color: #fdc073;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+ul li {
+	float: left;
+	margin: 12px 40px 0 50px;
+}
+
+
+ul.mainmenu {
+	list-style: none;
+	background: #3F4137;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	color: #fdc073;
+	font-size: 20px;
+	overflow: hidden;
+}
+ul.mainmenu li {
+	float: left;
+	margin: 18px 40px 0 50px;
+}
+ul.mainmenu li.last {float: right;}
+
+ul li a {
+	color: #fdc073;
+	text-decoration: none;
+}
+ul li a:hover {
+	color: #FDA83D;
+}
+
+div.content {
+	margin: 10px;
+}
+
+.form-login label {
+	display: inline-block;
+	min-width: 80px;
+}
+.form-login p {margin: 10px 0 10px 0;}
+.form-login input[type=submit], textarea {
+	font-size: 16px;
+}
+
+.form-login .invalid {
+	background: #FF9898;
+}
+.form-login .invalid-feedback {
+	color: #CC0000;
+}
+
+.flash {padding: 10px;}
+.flash.success {
+	border: 1px solid #21DB56;
+	background: #AEFFC5;
+}
+.flash.error {
+	border: 1px solid #FF4343;
+	background: #FF9C9C;
+}
+
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}

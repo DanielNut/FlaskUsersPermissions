@@ -1,0 +1,54 @@
+{% extends 'user-list.html' %}
+
+{% block content %}
+
+{% block mainmenu %}
+{{super()}}
+{%endblock mainmenu%}
+
+
+{% block redact %}
+{{super()}}
+{% endblock redact %}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+{% if action == 'delete' %}
+        <form action="/user-list/{{username}}/delete" method="post" class="form-delete">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name.label() }} {{ form.name() }}
+        <p>{{ form.submit() }}
+        </form>
+{% endif %}
+{% if action == 'add' %}
+        <form action="/user-list/{{username}}/add" method="post" class="form-delete">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name.label() }} {{ form.name() }}
+        <p>{{ form.password.label() }} {{ form.password() }}
+        <p>{{ form.permission_id.label() }} {{ form.permission_id() }}</p>
+        <p>{{ form.submit() }}
+        </form>
+{% endif %}
+{% if action == 'choose' %}
+        <form action="/user-list/{{username}}/choose" method="post" class="form-choose">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name.label() }} {{ form.name() }}
+        <p>{{ form.submit() }}
+        </form>
+{% endif %}
+{% if action == 'edit' %}
+        <form action="/user-list/{{username}}/edit/{{edit_user_name}}" method="post" class="form-edit">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name.label() }} {{ form.name() }}
+        <p>{{ form.password.label() }} {{ form.password() }}
+        <p>{{ form.permission_id.label() }} {{ form.permission_id() }}</p>
+        <p>{{ form.submit() }}
+        </form>
+{% endif%}
+</form>
+
+{% block usertable %}
+{{super()}}
+{% endblock usertable %}
+
+{% endblock content %}

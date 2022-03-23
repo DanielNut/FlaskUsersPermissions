@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block mainmenu %}
+{{ super() }}
+{% endblock mainmenu %}
+
+{% block redact %}
+<p>Пользователь {{username}}</p>
+{% if is_redactor %}
+    <ul class="menu">
+        {% for r in redact %}
+            <li><a href="{{username}}/{{r.action}}">{{r.name}}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock redact %}
+
+{% block usertable %}
+<table class="table">
+    <thead>
+        <tr>
+            <td>Имя</td>
+            <td>Доступ</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name, permission in members.items() %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{permission}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock usertable %}
+
+{% endblock content %}
